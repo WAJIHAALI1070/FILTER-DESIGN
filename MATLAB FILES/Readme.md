@@ -6,32 +6,48 @@ Usage:
   
             audio_data = load_audio('data/raw_audio');
 
-# noise_reduction.m
+# NOISE_REDUCTION.m
 Applies noise reduction techniques to the loaded audio data.
 
 Usage: 
                 
            filtered_audio = noise_reduction(audio_data);
 
-# feature_extraction.m
-Extracts frequency domain features from the denoised audio data.
-Usage: 
-
-            features = feature_extraction(filtered_audio);
-
-# frequency_classification.m
+# FREQUENCY_RANGE.m
 Classifies the audio data based on predefined frequency ranges.
 Usage: 
 
             classification_results = frequency_classification(features, 'data/FrequencyRanges.csv');
 
-# bandpass_filter_design.m
+# BANDPASSFILTER.m
 Designs a bandpass filter using the FIR method to isolate specific frequency ranges.
 Usage: 
               
               bpf_audio = bandpass_filter_design(filtered_audio, 11000, 12000);
+# SPECTROGRAM_PLOT
+Plots the spectrogram of each file in the data set 
+Usage: 
 
-# visualize_results.m
+
+    for k = 1:length(audioFiles)
+    file = audioFiles(k).name;
+    filename = fullfile(audioDir, file);
+    [y, Fs] = audioread(filename);
+    
+    window = hamming(1024);
+    noverlap = 512;
+    nfft = 1024;
+
+    [s, f, t, p] = spectrogram(y, window, noverlap, nfft, Fs, 'yaxis');
+    averagePower = mean(p, 2);
+    
+    % Store power spectrum
+    allPowerSpectra{k} = 10*log10(averagePower);
+    end
+
+
+
+# FILTER_DEPLOYMENT.m
 Generates visual plots comparing original and processed signals, and displays classification results.
 
 Usage: 
