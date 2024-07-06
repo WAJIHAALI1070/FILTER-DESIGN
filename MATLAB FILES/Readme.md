@@ -4,20 +4,20 @@ Loads audio data from the raw_audio directory and prepares it for processing.
 
 Usage: 
   
-            audio_data = load_audio('data/raw_audio');
+      audio_data = load_audio('data/raw_audio');
 
 # NOISE_REDUCTION.m
 Applies noise reduction techniques to the loaded audio data.
 
 Usage: 
-                
-           filtered_audio = noise_reduction(audio_data);
+  
+      filtered_audio = noise_reduction(audio_data);
 
 # FREQUENCY_RANGE.m
 Classifies the audio data based on predefined frequency ranges.
 Usage: 
 
-            classification_results = frequency_classification(features, 'data/FrequencyRanges.csv');
+      classification_results = frequency_classification(features, 'data/FrequencyRanges.csv');
 
 # BANDPASSFILTER.m
 Designs a bandpass filter using the FIR method to isolate specific frequency ranges.
