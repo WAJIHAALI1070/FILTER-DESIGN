@@ -1,0 +1,10 @@
+FileName,MinFreq_Hz,MaxFreq_Hz
+healthy1_filtered.wav,11000,11015.625
+healthy2_filtered.wav,11000,11015.625
+healthy3_filtered.wav,11000,11015.625
+noisy1_filtered.wav,0,6000
+noisy2_filtered.wav,0,5484.375
+noisy3_filtered.wav,0,6000
+unhealthy1_filtered.wav,60500,9421.875
+unhealthy2_filtered.wav,60500,9609.375
+unhealthy3_filtered.wav,60500,9468.75
