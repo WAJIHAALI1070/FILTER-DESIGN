@@ -14,7 +14,6 @@
   [wali.bee21seecs@seecs.edu.pk](mailto:wali.bee21seecs@seecs.edu.pk)
 
 ---
-
 ## Abstract
 The increasing global demand for animal protein has heightened reliance on the poultry industry for meat and eggs. Timely detection and management of infectious diseases in poultry are critical for maintaining animal welfare and preventing economic losses. This study focuses on compiling a dataset of healthy and unhealthy chickens to address this challenge. Audio data collected from a controlled environment at Bowen University's poultry research farm was analyzed to detect respiratory symptoms in poultry birds.
 
